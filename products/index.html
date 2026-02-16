@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Products | Mekano Engineering Pvt Ltd</title>
   <meta name="description" content="Browse all industrial products by Mekano Engineering — valves, pipes, motors, gearboxes, pneumatics, hose pipes, chain pulleys & more.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -16,32 +13,104 @@
   <div class="topbar"><div class="container"><div class="topbar-left"><a href="tel:+919820146056"><i class="fas fa-phone-alt"></i> +91 98201 46056</a><a href="mailto:info@mekanoengineering.in"><i class="fas fa-envelope"></i> info@mekanoengineering.in</a><span><i class="fas fa-clock"></i> Mon – Sat : 9:30 AM – 7:00 PM</span></div><div class="topbar-right"><a href="https://www.indiamart.com/mekanoengineering/" target="_blank"><i class="fas fa-store"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div></div>
 
   <!-- HEADER -->
-  <header class="header" id="header"><div class="container">
-    <a href="../index.html" class="logo"><div class="logo-icon">M</div>MEKANO<span>ENGG.</span></a>
-    <ul class="main-nav" id="mainNav">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="index.html" class="active">Products <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown">
-          <a href="industrial-valve-automation/index.html"><i class="fas fa-cogs"></i> Valve Automation</a>
-          <a href="industrial-pipes-fittings/index.html"><i class="fas fa-grip-lines"></i> Pipes & Fittings</a>
-          <a href="pneumatic-automation/index.html"><i class="fas fa-wind"></i> Pneumatic Solutions</a>
-          <a href="jointings-gland-packing/index.html"><i class="fas fa-ring"></i> Jointings & Packing</a>
-          <a href="instrument-flow-meter/index.html"><i class="fas fa-tachometer-alt"></i> Instruments & Meters</a>
-          <a href="industrial-electric-motor/index.html"><i class="fas fa-bolt"></i> Electric Motors</a>
-          <a href="flexible-hose-pipe/index.html"><i class="fas fa-water"></i> Flexible Hose Pipes</a>
-          <a href="gearboxes-geared-motors/index.html"><i class="fas fa-dharmachakra"></i> Gearboxes & Motors</a>
-          <a href="roller-chain-sprocket/index.html"><i class="fas fa-link"></i> Chains & Sprockets</a>
-          <a href="chain-pulley-block/index.html"><i class="fas fa-arrow-up"></i> Chain Pulley Blocks</a>
-        </div>
-      </li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-    <div class="header-cta">
-      <a href="tel:+919820146056" class="header-phone"><i class="fas fa-phone-alt"></i><div><small style="font-size:.7rem;color:var(--gray-500);display:block;">Call Us</small>+91 98201 46056</div></a>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">M</div>
+        MEKANO<span>ENGG.</span>
+      </a>
+      <ul class="main-nav" id="mainNav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li>
+          <a href="index.html" class="active">Products <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu" id="megaMenu">
+            <div class="mega-menu-inner">
+              <div class="mega-menu-categories" id="megaCats">
+                <div class="mega-cat-item active" data-cat="valves"><i class="fas fa-cogs"></i> Valve Automation <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="pipes"><i class="fas fa-grip-lines"></i> Pipes &amp; Fittings <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="pneumatic"><i class="fas fa-wind"></i> Pneumatic Solutions <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="gaskets"><i class="fas fa-ring"></i> Jointings &amp; Packing <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="instruments"><i class="fas fa-tachometer-alt"></i> Instruments &amp; Meters <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="motors"><i class="fas fa-bolt"></i> Electric Motors <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="hoses"><i class="fas fa-water"></i> Flexible Hose Pipes <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="gearboxes"><i class="fas fa-dharmachakra"></i> Gearboxes &amp; Motors <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="chains"><i class="fas fa-link"></i> Chains &amp; Sprockets <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+                <div class="mega-cat-item" data-cat="pulleys"><i class="fas fa-arrow-up"></i> Chain Pulley Blocks <span class="arrow"><i class="fas fa-chevron-right"></i></span></div>
+              </div>
+              <div class="mega-menu-products">
+                <div class="mega-products-grid active" data-panel="valves">
+                  <a href="industrial-valve-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/1/380026565/YS/QH/PR/10134674/shenco-swing-check-valve-500x500.jpg" alt="Swing Check Valve"><span>Swing Check Valve</span></a>
+                  <a href="industrial-valve-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/1/380026565/NL/UM/JF/10134674/shenco-screwed-ball-valve-500x500.jpg" alt="Ball Valve"><span>Screwed Ball Valve</span></a>
+                  <a href="industrial-valve-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/1/380026565/CH/WZ/TE/10134674/shenco-globe-valve-500x500.jpg" alt="Globe Valve"><span>Globe Valve</span></a>
+                  <a href="industrial-valve-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/2/387768019/LF/MQ/WP/10134674/shenco-gate-valve-500x500.jpg" alt="Gate Valve"><span>Shenco Gate Valve</span></a>
+                  <a href="industrial-valve-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/2/KP/RG/ON/10134674/cast-iron-gate-valves-500x500.jpg" alt="CI Gate Valve"><span>CI Gate Valve</span></a>
+                  <a href="industrial-valve-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2022/7/BU/CO/CI/10134674/audco-cast-iron-plug-valves-500x500.jpg" alt="Plug Valve"><span>Audco Plug Valve</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="pipes">
+                  <a href="industrial-pipes-fittings/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/OT/OD/TN/10134674/galvanized-iron-pipe-500x500.jpg" alt="GI Pipe"><span>GI Pipe</span></a>
+                  <a href="industrial-pipes-fittings/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/ET/RS/MR/10134674/cs-pipe-fittings-500x500.jpg" alt="CS Pipe Fittings"><span>CS Pipe Fittings</span></a>
+                  <a href="industrial-pipes-fittings/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/WT/OV/LG/10134674/ss-flange-pipe-fittings-500x500.jpg" alt="SS Flange Fittings"><span>SS Flange Fittings</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="pneumatic">
+                  <a href="pneumatic-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/1/380026565/KX/KQ/WU/10134674/festo-frl-unit-500x500.jpg" alt="FESTO FRL Unit"><span>FESTO FRL Unit</span></a>
+                  <a href="pneumatic-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/2/BL/PU/HH/10134674/festo-pneumatic-cylinder-500x500.jpg" alt="Pneumatic Cylinder"><span>Pneumatic Cylinder</span></a>
+                  <a href="pneumatic-automation/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/6/316858413/NQ/QO/MI/10134674/festo-solenoid-valve-500x500.jpg" alt="Solenoid Valve"><span>FESTO Solenoid Valve</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="gaskets">
+                  <a href="jointings-gland-packing/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/QT/YD/MK/10134674/ptfe-gland-packing-500x500.jpg" alt="PTFE Gland Packing"><span>PTFE Gland Packing</span></a>
+                  <a href="jointings-gland-packing/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/QS/JJ/DD/10134674/asbestos-gland-packing-rope-500x500.jpg" alt="Gland Packing Rope"><span>Gland Packing Rope</span></a>
+                  <a href="jointings-gland-packing/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2022/3/GR/HT/UF/10134674/ptft-thread-seal-tape-500x500.jpg" alt="Thread Seal Tape"><span>PTFE Thread Seal Tape</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="instruments">
+                  <a href="instrument-flow-meter/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/8/445022677/OH/UQ/YU/10134674/racer-ss-view-sight-glass-500x500.jpg" alt="Sight Glass"><span>Sight Glass</span></a>
+                  <a href="instrument-flow-meter/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439487600/TA/YD/TP/10134674/water-level-gauge-valve-500x500.jpg" alt="Water Level Gauge"><span>Water Level Gauge</span></a>
+                  <a href="instrument-flow-meter/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/6/427110024/EU/ZR/DK/10134674/cast-steel-y-strainer-valve-500x500.jpg" alt="Y Strainer"><span>Y Strainer</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="motors">
+                  <a href="industrial-electric-motor/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/HJ/QI/SJ/10134674/lv-electric-induction-motors-500x500.jpg" alt="Induction Motor"><span>LV Induction Motor</span></a>
+                  <a href="industrial-electric-motor/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/SN/NR/FQ/10134674/single-phase-induction-motor-500x500.jpg" alt="Single Phase Motor"><span>Single Phase Motor</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="hoses">
+                  <a href="flexible-hose-pipe/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439483897/AQ/FM/GE/10134674/newage-fire-hose-500x500.jpg" alt="Fire Hose"><span>Fire Hose</span></a>
+                  <a href="flexible-hose-pipe/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2024/8/439483897/AQ/FM/GE/10134674/newage-fire-hose-500x500.jpg" alt="Flexible Hose"><span>Flexible Hose</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="gearboxes">
+                  <a href="gearboxes-geared-motors/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/4/300549818/OJ/EZ/AG/10134674/helical-gear-box-500x500.jpg" alt="Helical Gearbox"><span>Helical Gearbox</span></a>
+                  <a href="gearboxes-geared-motors/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/4/300549818/AZ/YM/ZF/10134674/worm-gear-box-500x500.jpg" alt="Worm Gearbox"><span>Worm Gearbox</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="chains">
+                  <a href="roller-chain-sprocket/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/6/316858413/AB/CD/EF/10134674/diamond-roller-chain-500x500.jpg" alt="Roller Chain"><span>Diamond Roller Chain</span></a>
+                  <a href="roller-chain-sprocket/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/QS/EX/PV/10134674/industrial-chain-sprocket-500x500.jpg" alt="Chain Sprocket"><span>Chain Sprocket</span></a>
+                </div>
+                <div class="mega-products-grid" data-panel="pulleys">
+                  <a href="chain-pulley-block/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/YH/NF/PZ/10134674/indef-chain-pulley-block-500x500.jpg" alt="Indef Chain Pulley Block"><span>Indef Chain Pulley Block</span></a>
+                  <a href="chain-pulley-block/index.html" class="mega-product-card"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/TJ/MK/RA/10134674/chain-pulley-block-500x500.jpeg" alt="Chain Pulley Block"><span>Chain Pulley Block</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-menu-footer">
+              <span>Explore our full industrial product range</span>
+              <a href="index.html">View All Products →</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../partners.html">Our Parteners</a></li>
+        <li><a href="../applications.html">Applicatons</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="header-cta">
+        <a href="tel:+919820146056" class="header-phone">
+          <i class="fas fa-phone-alt"></i>
+          <div><small style="font-size:.7rem;color:var(--gray-500);display:block;">Call Us</small>+91 98201 46056</div>
+        </a>
+        <a href="#quoteModal" class="btn btn-primary btn-sm" data-modal="quoteModal">Get Quote</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-  </div></header>
+  </header>
 
   <!-- PAGE BANNER -->
   <section class="page-banner">

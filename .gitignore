@@ -7,6 +7,14 @@ scrape_images.py
 
 # Images downloaded by scraper
 images/products/
+images/mekanoengineering-in/
+
+# Local utilities (not part of site)
+fetch_url.py
+analyze_mekanoengineering_in.py
+scrape_mekanoengineering_in.py
+summarize_manifest.py
+download_brand_logos.py
 
 # OS
 Thumbs.db

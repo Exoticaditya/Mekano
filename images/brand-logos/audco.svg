@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="90" viewBox="0 0 320 90">
+  <rect x="0" y="0" width="320" height="90" rx="14" fill="#0B0B0F"/>
+  <rect x="12" y="12" width="66" height="66" rx="12" fill="#FF1E1E"/>
+  <path d="M45 28c9 0 16 7 16 17s-7 17-16 17-16-7-16-17 7-17 16-17zm0 8c-4.6 0-8 3.7-8 9s3.4 9 8 9 8-3.7 8-9-3.4-9-8-9z" fill="#FFD300"/>
+  <text x="96" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="2" fill="#FFFFFF">AUDCO</text>
+</svg>

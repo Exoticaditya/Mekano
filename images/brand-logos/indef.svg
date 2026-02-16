@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="90" viewBox="0 0 320 90">
+  <rect x="0" y="0" width="320" height="90" rx="14" fill="#0B0B0F"/>
+  <rect x="12" y="12" width="66" height="66" rx="12" fill="#FF1E1E"/>
+  <path d="M31 30h28v7H47v23h-7V37H31v-7z" fill="#FFD300"/>
+  <text x="96" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="2" fill="#FFFFFF">INDEF</text>
+</svg>
