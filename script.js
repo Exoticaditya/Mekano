@@ -19,16 +19,16 @@
 
   // ---- MOBILE NAV ----
   const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
+  const navInner = document.querySelector('.navbar-inner');
 
-  if (navToggle && mainNav) {
+  if (navToggle && navInner) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
-      mainNav.classList.toggle('open');
+      navInner.classList.toggle('open');
     });
 
     // Mobile sub-menu toggles
-    mainNav.querySelectorAll(':scope > li').forEach(li => {
+    navInner.querySelectorAll('.main-nav > li').forEach(li => {
       const sub = li.querySelector('.mega-menu, .dropdown');
       if (!sub) return;
       li.querySelector(':scope > a').addEventListener('click', e => {
