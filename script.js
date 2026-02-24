@@ -96,6 +96,7 @@
 
       el.dataset.animated = '1';
       const target = parseInt(el.dataset.target, 10);
+      el.textContent = '0'; // reset before animating (HTML default = fallback for no-JS)
       const duration = 2000;
       const start = performance.now();
 
