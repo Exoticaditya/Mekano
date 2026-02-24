@@ -939,18 +939,23 @@ h4 {
   color: var(--dark);
 }
 
-/* ---------- NAVBAR ---------- */
+/* ---------- NAVBAR (glassmorphic) ---------- */
 .navbar {
-  background: transparent;
   flex: 1;
   display: flex;
   align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .navbar-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 40px;
   width: 100%;
 }
@@ -990,53 +995,7 @@ h4 {
   color: var(--accent);
 }
 
-/* Nav Utilities (cart + search) */
-.nav-utilities {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding-left: 12px;
-}
-
-.nav-util-item {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: var(--transition);
-}
-
-.nav-util-item:hover {
-  color: var(--accent);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.cart-btn {
-  position: relative;
-}
-
-.cart-count {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 17px;
-  height: 17px;
-  background: var(--accent);
-  color: var(--dark);
-  border-radius: 50%;
-  font-size: 0.62rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
+/* nav-utilities removed */
 
 /* ---------- BTN DARK ---------- */
 .btn-dark {
