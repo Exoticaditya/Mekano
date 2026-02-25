@@ -842,25 +842,6 @@ h4 {
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.logo-section::before {
-  content: '\f1fc';
-  /* FontAwesome brush icon */
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--gold);
-  color: var(--white);
-  width: 32px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -869,9 +850,9 @@ h4 {
 }
 
 .logo-img {
-  width: 140px;
+  width: 190px;
   /* Increased logo size */
-  max-height: 70px;
+  max-height: 90px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
@@ -1042,41 +1023,6 @@ h4 {
 .main-nav>li>a:hover,
 .main-nav>li>a.active {
   color: var(--gold);
-}
-
-/* Utility Icons */
-.header-utils {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-utils a {
-  color: var(--white);
-  font-size: 18px;
-  position: relative;
-  transition: var(--transition);
-}
-
-.header-utils a:hover {
-  color: var(--gold);
-}
-
-/* Cart Badge */
-.header-utils .cart-icon .badge {
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  background: var(--gold);
-  color: var(--dark);
-  font-size: 9px;
-  font-weight: 800;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ---------- BTN DARK ---------- */
