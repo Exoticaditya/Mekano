@@ -2576,22 +2576,11 @@ h4 {
   transition: var(--transition);
 }
 
-.marquee-logo-item:hover {
-  border-color: var(--gold);
-  box-shadow: var(--shadow-md), 0 0 0 3px var(--gold-muted);
-  transform: translateY(-3px);
-}
-
 .marquee-logo-item img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.65);
-  transition: filter 0.4s var(--ease);
-}
-
-.marquee-logo-item:hover img {
-  filter: grayscale(0%) opacity(1);
+  filter: none;
 }
 
 /* --- Separator line under marquee --- */
@@ -2715,23 +2704,12 @@ h4 {
   cursor: default;
 }
 
-.acp-logo-card:hover {
-  border-color: var(--gold);
-  box-shadow: var(--shadow-md), 0 0 0 3px var(--gold-muted);
-  transform: translateY(-4px);
-}
-
 .acp-logo-card img {
   height: 70px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.4s var(--ease);
-}
-
-.acp-logo-card:hover img {
-  filter: grayscale(0%) opacity(1);
+  filter: none;
 }
 
 .acp-logo-card span {
@@ -2740,11 +2718,6 @@ h4 {
   color: var(--gray-600);
   text-align: center;
   letter-spacing: 0.3px;
-  transition: color var(--transition);
-}
-
-.acp-logo-card:hover span {
-  color: var(--gold-dark);
 }
 
 /* Responsive */
