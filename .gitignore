@@ -25,3 +25,14 @@ Desktop.ini
 .vscode/
 *.swp
 *.swo
+
+# Netlify
+.netlify/
+
+# Temp files
+tmpclaude-*-cwd
+*.tmp
+
+# Node (in case added later)
+node_modules/
+package-lock.json

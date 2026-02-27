@@ -1,0 +1,85 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[redirects]]
+  from = "/products/industrial-valve-automation/*"
+  to = "/products/industrial-valves/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/industrial-pipes-fittings/*"
+  to = "/products/pipes-fittings/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/pneumatic-automation/*"
+  to = "/products/pneumatic-solutions/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/jointings-gland-packing/*"
+  to = "/products/jointings-packing/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/instrument-flow-meter/*"
+  to = "/products/instruments-meters/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/industrial-electric-motor/*"
+  to = "/products/electric-motors/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/flexible-hose-pipe/*"
+  to = "/products/flexible-hose-pipes/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/gearboxes-geared-motors/*"
+  to = "/products/gearboxes-motors/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/roller-chain-sprocket/*"
+  to = "/products/chains-sprockets/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/products/chain-pulley-block/*"
+  to = "/products/chain-pulley-blocks/:splat"
+  status = 301
