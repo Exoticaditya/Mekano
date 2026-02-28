@@ -32,6 +32,7 @@ Desktop.ini
 # Temp files
 tmpclaude-*-cwd
 *.tmp
+*.ps1
 
 # Node (in case added later)
 node_modules/

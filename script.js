@@ -19,16 +19,36 @@
 
   // ---- MOBILE NAV ----
   const navToggle = document.getElementById('navToggle');
-  const navInner = document.querySelector('.navbar-inner');
+  const mainNav   = document.getElementById('mainNav');
+  const navInner  = document.querySelector('.navbar-inner');
 
-  if (navToggle && navInner) {
+  // Overlay backdrop to close mobile nav on outside click
+  let navOverlay = document.getElementById('navOverlay');
+  if (!navOverlay) {
+    navOverlay = document.createElement('div');
+    navOverlay.id = 'navOverlay';
+    navOverlay.style.cssText = 'display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.45);';
+    document.body.appendChild(navOverlay);
+  }
+
+  function closeNav() {
+    if (navToggle) navToggle.classList.remove('active');
+    if (mainNav)   mainNav.classList.remove('open');
+    navOverlay.style.display = 'none';
+  }
+
+  if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => {
+      const opening = !mainNav.classList.contains('open');
       navToggle.classList.toggle('active');
-      navInner.classList.toggle('open');
+      mainNav.classList.toggle('open');
+      navOverlay.style.display = opening ? 'block' : 'none';
     });
 
+    navOverlay.addEventListener('click', closeNav);
+
     // Mobile sub-menu toggles
-    navInner.querySelectorAll('.main-nav > li').forEach(li => {
+    mainNav.querySelectorAll('.main-nav > li').forEach(li => {
       const sub = li.querySelector('.mega-menu, .dropdown');
       if (!sub) return;
       li.querySelector(':scope > a').addEventListener('click', e => {

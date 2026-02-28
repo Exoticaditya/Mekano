@@ -2315,7 +2315,15 @@ h4 {
   }
 
   .navbar {
-    display: none;
+    height: 0;
+    min-height: 0;
+    flex: none;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .main-nav {
+    pointer-events: auto;
   }
 
   .nav-toggle {
