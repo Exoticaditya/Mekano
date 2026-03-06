@@ -60,13 +60,37 @@
     });
   }
 
-  // ---- MEGA MENU HOVER (Desktop) ----
+  // ---- MEGA MENU HOVER + CLICK (Desktop & Mobile) ----
   const megaCats = document.getElementById('megaCats');
   if (megaCats) {
     const items = megaCats.querySelectorAll('.mega-cat-item');
     const panels = document.querySelectorAll('.mega-products-grid');
 
+    // Find the HOME link to dynamically determine the correct relative depth to root
+    const homeLink = document.querySelector('.main-nav > li > a[href*="index.html"]');
+    let originPath = '/';
+    if (homeLink) {
+      const href = homeLink.getAttribute('href');
+      // e.g. if href is "index.html" or "../../index.html", strip "index.html" to get the root path
+      originPath = href.replace('index.html', '');
+    }
+
+    // Dynamic paths — work at every depth on the site without breaking local dev
+    const catLinks = {
+      valves:      originPath + 'products/industrial-valves/index.html',
+      pipes:       originPath + 'products/pipes-fittings/index.html',
+      pneumatic:   originPath + 'products/pneumatic-solutions/index.html',
+      gaskets:     originPath + 'products/jointings-packing/index.html',
+      instruments: originPath + 'products/instruments-meters/index.html',
+      motors:      originPath + 'products/electric-motors/index.html',
+      hoses:       originPath + 'products/flexible-hose-pipes/index.html',
+      gearboxes:   originPath + 'products/gearboxes-motors/index.html',
+      chains:      originPath + 'products/chains-sprockets/index.html',
+      pulleys:     originPath + 'products/chain-pulley-blocks/index.html'
+    };
+
     items.forEach(item => {
+      // Desktop: hover switches product panel
       item.addEventListener('mouseenter', () => {
         items.forEach(i => i.classList.remove('active'));
         panels.forEach(p => p.classList.remove('active'));
@@ -75,6 +99,15 @@
         const target = document.querySelector(`.mega-products-grid[data-panel="${cat}"]`);
         if (target) target.classList.add('active');
       });
+
+      // Desktop + Mobile: click navigates to category page
+      item.addEventListener('click', () => {
+        const link = catLinks[item.dataset.cat];
+        if (link) window.location.href = link;
+      });
+
+      // Make cursor look clickable
+      item.style.cursor = 'pointer';
     });
   }
 

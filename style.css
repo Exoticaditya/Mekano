@@ -860,6 +860,9 @@ h4 {
   display: block;
   flex-shrink: 0;
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.25)) drop-shadow(0 0 35px rgba(255, 255, 255, 0.1));
+  background-color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .logo-text-wrapper {
