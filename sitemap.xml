@@ -159,6 +159,32 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Electric Motors -->
+  <url>
+    <loc>https://mekanoengineering.com/products/electric-motors/index.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mekanoengineering.com/products/electric-motors/abb-three-phase-motor/index.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mekanoengineering.com/products/electric-motors/siemens-gp-motor/index.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mekanoengineering.com/products/electric-motors/havells-ie2-motor/index.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Flexible Hose Pipes -->
   <url>
     <loc>https://mekanoengineering.com/products/flexible-hose-pipes/index.html</loc>

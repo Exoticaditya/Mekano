@@ -82,6 +82,7 @@
       pneumatic: originPath + 'products/pneumatic-solutions/index.html',
       gaskets: originPath + 'products/jointings-packing/index.html',
       instruments: originPath + 'products/instruments-meters/index.html',
+      motors: originPath + 'products/electric-motors/index.html',
       hoses: originPath + 'products/flexible-hose-pipes/index.html',
       gearboxes: originPath + 'products/gearboxes/index.html',
       chains: originPath + 'products/chains-sprockets/index.html',
