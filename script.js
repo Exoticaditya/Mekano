@@ -19,8 +19,8 @@
 
   // ---- MOBILE NAV ----
   const navToggle = document.getElementById('navToggle');
-  const mainNav   = document.getElementById('mainNav');
-  const navInner  = document.querySelector('.navbar-inner');
+  const mainNav = document.getElementById('mainNav');
+  const navInner = document.querySelector('.navbar-inner');
 
   // Overlay backdrop to close mobile nav on outside click
   let navOverlay = document.getElementById('navOverlay');
@@ -33,7 +33,7 @@
 
   function closeNav() {
     if (navToggle) navToggle.classList.remove('active');
-    if (mainNav)   mainNav.classList.remove('open');
+    if (mainNav) mainNav.classList.remove('open');
     navOverlay.style.display = 'none';
   }
 
@@ -77,16 +77,15 @@
 
     // Dynamic paths — work at every depth on the site without breaking local dev
     const catLinks = {
-      valves:      originPath + 'products/industrial-valves/index.html',
-      pipes:       originPath + 'products/pipes-fittings/index.html',
-      pneumatic:   originPath + 'products/pneumatic-solutions/index.html',
-      gaskets:     originPath + 'products/jointings-packing/index.html',
+      valves: originPath + 'products/industrial-valves/index.html',
+      pipes: originPath + 'products/pipes-fittings/index.html',
+      pneumatic: originPath + 'products/pneumatic-solutions/index.html',
+      gaskets: originPath + 'products/jointings-packing/index.html',
       instruments: originPath + 'products/instruments-meters/index.html',
-      motors:      originPath + 'products/electric-motors/index.html',
-      hoses:       originPath + 'products/flexible-hose-pipes/index.html',
-      gearboxes:   originPath + 'products/gearboxes-motors/index.html',
-      chains:      originPath + 'products/chains-sprockets/index.html',
-      pulleys:     originPath + 'products/chain-pulley-blocks/index.html'
+      hoses: originPath + 'products/flexible-hose-pipes/index.html',
+      gearboxes: originPath + 'products/gearboxes/index.html',
+      chains: originPath + 'products/chains-sprockets/index.html',
+      pulleys: originPath + 'products/chain-pulley-blocks/index.html'
     };
 
     items.forEach(item => {
