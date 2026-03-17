@@ -660,7 +660,8 @@
   }
 
   function assetPath(originPath, fileName) {
-    return `${originPath}assets/products/${fileName}`;
+    const safeFile = String(fileName || '').replace(/^\/+/, '');
+    return `/assets/products/${safeFile}`;
   }
 
   function categoryPath(originPath, slug) {
@@ -668,15 +669,30 @@
   }
 
   function normalizeLocalAssetPaths(originPath) {
-    document.querySelectorAll('img[src^="/assets/"]').forEach(img => {
-      img.src = `${originPath}${img.getAttribute('src').replace(/^\//, '')}`;
+    document.querySelectorAll('img[src]').forEach(img => {
+      const src = img.getAttribute('src') || '';
+      if (/^https?:\/\//i.test(src) || /^data:/i.test(src)) return;
+
+      if (/^(\.\.\/)+assets\//.test(src)) {
+        img.src = `/${src.replace(/^(\.\.\/)+/, '')}`;
+        return;
+      }
+
+      if (/^assets\//.test(src)) {
+        img.src = `/${src}`;
+      }
     });
 
-    document.querySelectorAll('[style*="/assets/"]').forEach(el => {
+    document.querySelectorAll('[style*="assets/"]').forEach(el => {
       const bg = el.style.backgroundImage;
-      if (bg && bg.includes('/assets/')) {
-        el.style.backgroundImage = bg.replace(/url\((["']?)\/assets\//g, `url($1${originPath}assets/`);
-      }
+      if (!bg) return;
+
+      if (bg.includes('url("/assets/') || bg.includes("url('/assets/") || bg.includes('url(/assets/')) return;
+
+      el.style.backgroundImage = bg
+        .replace(/url\((["']?)\.\.\/\.\.\/assets\//g, 'url($1/assets/')
+        .replace(/url\((["']?)\.\.\/assets\//g, 'url($1/assets/')
+        .replace(/url\((["']?)assets\//g, 'url($1/assets/');
     });
   }
 
@@ -807,7 +823,7 @@
     });
   }
 
-  function updateProductsLandingCounts() {
+  function updateProductsLandingCounts(originPath) {
     const path = window.location.pathname
       .replace(/\\/g, '/')
       .replace(/\/index\.html$/, '')
@@ -822,6 +838,13 @@
       if (!category) return;
       const countEl = card.querySelector('.cat-count');
       if (countEl) countEl.textContent = `${category.products.length} Products`;
+
+      // Ensure category cards always show a visible thumbnail, sourced from the catalog.
+      const imgEl = card.querySelector('.cat-card-img');
+      const leadImage = category.products[0] && category.products[0].image;
+      if (imgEl && leadImage) {
+        imgEl.style.backgroundImage = `url('${assetPath(originPath, leadImage)}')`;
+      }
     });
   }
 
@@ -859,7 +882,7 @@
   normalizeLocalAssetPaths(originPath);
   enhanceProductsNav(originPath);
   renderCategoryListings(originPath);
-  updateProductsLandingCounts();
+  updateProductsLandingCounts(originPath);
   redirectLegacyProductDetails(originPath);
 
   // ---- MOBILE NAV ----
