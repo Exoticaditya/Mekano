@@ -683,12 +683,14 @@
   function buildMegaMenu(originPath) {
     const categoriesHtml = PRODUCT_CATALOG.map((category, index) => `
       <div class="mega-cat-item ${index === 0 ? 'active' : ''}" data-cat="${category.id}">
-        <i class="${category.icon}"></i> ${category.label}
+        <i class="${category.icon}"></i>
+        <span>${category.label}</span>
+        <small class="mega-cat-count">${category.products.length}</small>
         <span class="arrow"><i class="fas fa-chevron-right"></i></span>
       </div>`).join('');
 
     const panelsHtml = PRODUCT_CATALOG.map((category, index) => {
-      const productCards = category.products.slice(0, 3).map(product => `
+      const productCards = category.products.map(product => `
         <a href="${categoryPath(originPath, category.slug)}" class="mega-product-card">
           <img loading="lazy" src="${assetPath(originPath, product.image)}" alt="${product.name}">
           <span>${product.name}</span>
@@ -780,8 +782,11 @@
   }
 
   function renderCategoryListings(originPath) {
-    const path = window.location.pathname.replace(/\\/g, '/');
-    const match = path.match(/\/products\/([^/]+)\/index\.html$/);
+    const path = window.location.pathname
+      .replace(/\\/g, '/')
+      .replace(/\/index\.html$/, '')
+      .replace(/\/+$/, '');
+    const match = path.match(/\/products\/([^/]+)$/);
     if (!match) return;
 
     const category = CATEGORY_BY_SLUG[match[1]];
@@ -803,8 +808,11 @@
   }
 
   function updateProductsLandingCounts() {
-    const path = window.location.pathname.replace(/\\/g, '/');
-    if (!/\/products\/index\.html$/.test(path)) return;
+    const path = window.location.pathname
+      .replace(/\\/g, '/')
+      .replace(/\/index\.html$/, '')
+      .replace(/\/+$/, '');
+    if (!/\/products$/.test(path)) return;
 
     document.querySelectorAll('.cat-card').forEach(card => {
       const href = card.getAttribute('href') || '';
@@ -818,8 +826,11 @@
   }
 
   function redirectLegacyProductDetails(originPath) {
-    const path = window.location.pathname.replace(/\\/g, '/');
-    const match = path.match(/\/products\/([^/]+)\/[^/]+\/index\.html$/);
+    const path = window.location.pathname
+      .replace(/\\/g, '/')
+      .replace(/\/index\.html$/, '')
+      .replace(/\/+$/, '');
+    const match = path.match(/\/products\/([^/]+)\/[^/]+$/);
     if (!match) return;
 
     window.location.replace(categoryPath(originPath, match[1]));

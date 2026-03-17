@@ -549,7 +549,7 @@ h4 {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  width: 900px;
+  width: 980px;
   background: var(--white);
   box-shadow: var(--shadow-xl);
   border-radius: var(--radius-lg);
@@ -612,15 +612,25 @@ h4 {
   color: var(--gray-500);
 }
 
+.mega-cat-count {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--gray-500);
+}
+
 .mega-menu-products {
   flex: 1;
   padding: 24px;
   min-height: 340px;
+  max-height: 430px;
+  overflow-y: auto;
 }
 
 .mega-products-grid {
   display: none;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -633,6 +643,8 @@ h4 {
   padding: 12px;
   border-radius: var(--radius);
   transition: var(--transition);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
 }
 
 .mega-product-card:hover {
@@ -2294,7 +2306,7 @@ h4 {
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1100px) {
   .mega-menu {
-    width: 720px;
+    width: 760px;
   }
 
   .mega-products-grid {
