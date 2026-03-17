@@ -651,6 +651,18 @@
   appendBulkImportedProducts();
 
   const CATEGORY_BY_SLUG = Object.fromEntries(PRODUCT_CATALOG.map(category => [category.slug, category]));
+  const CATEGORY_THUMBNAILS = {
+    'industrial-valves': '/assets/categories/cat-industrial-valves.png',
+    'pipes-fittings': '/assets/categories/cat-pipes-fittings.png',
+    'pneumatic-solutions': '/assets/categories/cat-pneumatic-solutions.png',
+    'jointings-packing': '/assets/categories/cat-jointings-packing.png',
+    'instruments-meters': '/assets/categories/cat-instruments-meters.png',
+    'electric-motors': '/assets/categories/cat-electric-motors.jpg',
+    'flexible-hose-pipes': '/assets/categories/cat-flexible-hose-pipes.jpg',
+    'gearboxes': '/assets/categories/cat-gearboxes.jpg',
+    'chains-sprockets': '/assets/categories/cat-chains-sprockets.png',
+    'chain-pulley-blocks': '/assets/categories/cat-chain-pulley-blocks.png'
+  };
 
   function getOriginPath() {
     const homeLink = document.querySelector('.main-nav > li > a[href*="index.html"]');
@@ -839,10 +851,13 @@
       const countEl = card.querySelector('.cat-count');
       if (countEl) countEl.textContent = `${category.products.length} Products`;
 
-      // Ensure category cards always show a visible thumbnail, sourced from the catalog.
+      // Keep curated category thumbnails, with product-image fallback.
       const imgEl = card.querySelector('.cat-card-img');
+      const curatedThumb = CATEGORY_THUMBNAILS[category.slug];
       const leadImage = category.products[0] && category.products[0].image;
-      if (imgEl && leadImage) {
+      if (imgEl && curatedThumb) {
+        imgEl.style.backgroundImage = `url('${curatedThumb}')`;
+      } else if (imgEl && leadImage) {
         imgEl.style.backgroundImage = `url('${assetPath(originPath, leadImage)}')`;
       }
     });
